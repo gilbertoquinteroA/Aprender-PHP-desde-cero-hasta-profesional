@@ -1,5 +1,5 @@
-# Aprender-PHP-desde-cero-hasta-profesional
-Bienvenidos a mi manual completo con todos los recursos necesarios para aprender php desde cero hasta una profesiona de una manera cool y facil sin problema, espero que te guste y lo compartas.
+# Aprender PHP desde cero hasta profesional
+Bienvenidos a mi manual completo con todos los recursos necesarios para aprender php desde cero hasta una profesional de una manera cool y facil sin problema, espero que te guste y lo compartas.
 
 
  primero yo estoy usando la version 5 de php para este manual pero vere cosas de php 7 y versiones anteriores que es necesaria saber en php funcional.
@@ -187,7 +187,9 @@ los numeros flotantes tienen un limite de precision.depente del sistema operativ
 si quieres aprender mas sobre este formato te sugiero leer este articulo en ingles: http://www.oxfordmathcenter.com/drupal7/node/43
 
 
+Ahora que  conoces que es y como funciona un float ahora vamos a ver como fuciona el Strings:
 
+ a string is series of characters, where a character is the same as a byte. This means that PHP only supports a 256-character set, and hence does not offer native Unicode support. See details of the string type. 
 
  
  
