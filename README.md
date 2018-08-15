@@ -65,23 +65,23 @@ como dice wikipedia PHP  es:
 
 PHP: Hypertext Preprocessor (or simply PHP) is a server-side scripting language designed for Web development, but also used as a general-purpose programming language. 
 
-sencillamente un lenguage de progrmacion orienta a scripting, si no sabes lo que son los lenguages script te recomiend googlear sobre ellos antes de continuar con este manual.
+sencillamente un lenguage de programacion orientadl a scripting, si no sabes lo que son los lenguages script te recomiend googlear sobre ellos antes de continuar con este manual.
 
 
 soporta: diferentes tipo de programacion que son:	Imperative, functional, object-oriented, procedural, reflective
 
 
-en eeste manual veremos solamente funcional y POO.
+en este manual veremos solamente funcional y POO.
 
 su creador es: Rasmus Lerdorf
 
 fuente:https://en.wikipedia.org/wiki/PHP
 
-bueno ya que sabemos que onda con PHP y que es vamos empezemos  programar algunos simples script php para que aprendas la sintaxis 
+bueno ya que sabemos que onda con PHP y que es vamos empezemos a programar algunos simples script php para que aprendas la sintaxis 
 facil de PHP.
 
 
- supongoo yo que tienes ya instalado un editor de codigo como sublime text 3 que en este caso usare.
+ supongo yo que tienes  instalado un editor de codigo como sublime text 3 que en este caso.
  
  primero debes crear una carpeta llamada nose aprender-PHP en tu servidor web xampp/LAMP para windows solo busca en tu disco local la carpeta xampp/htdocs
  
@@ -93,7 +93,7 @@ facil de PHP.
   
   antes de esto debes crear un archivo llamado index.php y agregar una simple estructura html
   
-  Cuando PHP se agregara en el codigo html se utilizan las tangs :   <?php y  ?>  (las debes agregar dentro del body)   las cuales le estan indicando al servidor web apche en este caso que ste sitio tiene una peticion PHP y  debe ejuctarla con el compilador de PHP que mas adelante veremos como funciona y como jugar con el.
+  Cuando PHP se agregara en el codigo html se utilizan las tangs :   <?php y  ?>  (las debes agregar dentro del body)   las cuales le estan indicando al servidor web apche en este caso que este sitio tiene una peticion PHP y  debe ejuctarla con el compilador de PHP que mas adelante veremos como funciona y como jugar con el.
   
   aunque existen otras maneras de agregar estas etiquetas las mas usadas son estas.
   
@@ -134,7 +134,7 @@ if ($action == "show_version") {
     echo "esta disponible";
 }
 
-//igualmente existe una manera de saber si algo es true, de la siguiente manera, pero es inutil usar un TRUE dentro de un if porque //todo los if en todos los lenguages funciona igual, si pasas una variable,etc en un if el valor debe ser true sino se pasa al esle
+//igualmente existe una manera de saber si algo es true, de la siguiente manera, pero es inutil usar un TRUE dentro de un if porque //todo los if en todos los lenguages funciona igual, si pasas una variable,etc en un if el valor debe ser true sino se pasa al else
 //por eso es inutil usar un TRUE dentro del if.
 
 if ($show_separators == TRUE) {
@@ -145,7 +145,7 @@ if ($show_separators == TRUE) {
   
   Ahora que ya sabes como funciona los booleanos en php , pero para que los podria usar en mis proyectos web bueno sencillamente en   muchas cosas los puedes usar por ejemplo en sesiones de usuarios en un sistema web,en una validacion cuando  agregas un dato en bd,para saber si existe algun valor o no,etc.
 
-bueno ahora veremos el intergs que literlamente es el INT en PHP.
+bueno ahora veremos el intergs que literalamente es el INT en PHP.
 
 
 intergs puede ser especificado en decimal (base 10) , hexadecimal (base 16), octal (base 8) o binary (base 2)
@@ -165,7 +165,7 @@ $a = 0x1A; //numero  hexadecimal  (equivalente a 26 decimal)
 $a = 0b11111111; //  numero binary  (equivalente a 255 decimal)
 ?>
 
- La dimension de un  integer es dependiente de la plantaforma, el tamaño puede ser determinado usando la constante PHP_INT_SIZE, maximo valor usando la constante  PHP_INT_MAX since PHP 5.0.5, and el minimo valor usando la constante PHP_INT_MIN since PHP 7.0.0. 
+ La dimension de un  integer es dependiente de la plantaforma, el tamaño puede ser determinado usando la constante PHP_INT_SIZE, maximo valor usando la constante  PHP_INT_MAX since PHP 5.0.5, y el minimo valor usando la constante PHP_INT_MIN since PHP 7.0.0. 
  
  los integer son usados en PHP con los Arrays puees hacer muchas cosas con ellos.
  
@@ -182,16 +182,188 @@ $c = 7E-10;
 Igual como con el intergs los float son dependiente de la plantaforma para su tamaño.
 
 
-los numeros flotantes tienen un limite de precision.depente del sistema operativo, PHP usa tipucante  IEEE 754 format
+los numeros flotantes tienen un limite de precision.JQuery depente del sistema operativo, PHP usa tipucante  IEEE 754 format
 
 si quieres aprender mas sobre este formato te sugiero leer este articulo en ingles: http://www.oxfordmathcenter.com/drupal7/node/43
 
 
 Ahora que  conoces que es y como funciona un float ahora vamos a ver como fuciona el Strings:
 
- a string is series of characters, where a character is the same as a byte. This means that PHP only supports a 256-character set, and hence does not offer native Unicode support. See details of the string type. 
+una cadena es una serie de caracteres, donde un carácter es lo mismo que un byte. Esto significa que PHP solo admite un conjunto de 256 caracteres y, por lo tanto, no ofrece compatibilidad nativa con Unicode. Ver detalles del tipo de cadena
 
+los string en PHP se declaran de diferentes maneras:
+
+ingle quoted
+ un ejemplo:
+
+echo 'Hola';
+
+double quoted
+
+un ejemplo:
+<?php
+echo "Hola";
+
+heredoc syntax
+un ejemplo:
+
+$mensaje = <<<EOD  
+Hola
+EOD;
+
+ nowdoc syntax (agregada en PHP 5.3.0) 
+$str = <<<'EOD'
+Hola
+EOD;
+
+Ahora que ya conoces lo mas basico sobre los strings lo cual esta bien por el momento, ahora veremos como funcionan los Arrays en PHP, si conoces los Arrays porque los aprendistes en otros lenguages como Java o JavaScript,etc, ps no cambia mucho su funcionalidad en PHP.
+
+como sabemos un array es un conjunto de datos ordenados sencillamente.
+
+y se puede declarar con la funcion  array() de php de la siguiente manera:
+
+array(
+    key  => value,
+    key2 => value2,
+    key3 => value3,
+    
+)
+
+debes saber que en php puede omitir la ultima coma en el ultimo valor.
+
+
+desde php 5.4 puedes remplazar la funcion array() con [] y crear arrays mas faciles de la siguiente manera:
+
+$array = [
+    "valor1" => "maria",
+    "valor2" => "juan",
+];
+
+debes saber que en un array php la claves o mejor llamada keys pueden ser un string que contenga un interg,float,booleanos  pero un array y objecto no puede ser keys en los arrays en PHP si lo intentas te mostraria el siguiente error o alerta mejor dicho: 
+
+ Illegal offset type. 
+ si  tienes multiples valores con el mismo tipo de keys  solo el ultimo srea el validos y los otros seran sobre escrito.
  
+ por ejemplo si tuvieramos el siguiente codigo:
+ 
+ 
+ 
+<?php
+$array = array(
+    1    => "a",
+    "1"  => "b",
+    1.5  => "c",
+    true => "d",
+);
+var_dump($array);
+?>
+
+y yo quiero imprmir el primer 1 que su valor es a,el resultado no seria a seria b.
+
+siendo honesto eso no me gusta de PHP que tenga esto no conozco otra manera de hacerlo aunque buscare de existe y lo agregare.
+
+debes saber que en php existen los arrays sin keys y se crean de la siguiente manera:
+
+
+<?php
+$array = array("valor1", "valor2", "valor3", "valor4");
+var_dump($array);
+?>
+
+si si si tienen un indentificador pero no como los arrays anteriores.
+
+en php puedes especificar solo un keys y a los otros no de la siguiente manera:
+
+
+
+<?php
+$array = array(
+         "a",
+         "b",
+    6 => "c",
+         "d",
+);
+var_dump($array);
+?>
+
+aunque a mi se me hace raro porque vengo de java pero php lo tiene y deberias saberlos.
+
+ahora que ya conoces lo mas importante sobre los arrays ahora veremos como acceder  a ellos.
+
+
+okay ahora imaginemos que tenemos este array multidimensional:
+
+$array = array(
+    "foo" => "bar",
+    42    => 24,
+    "multi" => array(
+         "dimensional" => array(
+             "array" => "foo"
+         )
+    )
+);
+
+por ejemplo si quieres acceder al valor de foo sencillamente debes hacer algo asi:
+
+var_dump($array["foo"]);
+
+
+y lo veras en la pantalla su valor.
+
+pero ahora imaginemos que quieres acceder al valor array de multi, deberias hacer algo asi:
+
+var_dump($array["multi"]["dimensional"]["array"]);
+
+
+asi de  sencillamente  ya accedistes al valor de multi.
+
+
+ahora vamos a ver sobre Array dereferencing , es saber un valor de un array desde una funciona, lose algo raro y complicado pero con el siguiente ejmplo lo entenderas mejor.
+
+
+  okay imaginemos que tienes esta funcion:
+  
+  function ObtenerArray() {
+    return array(1, 2, 3);
+}
+
+como vez tenemos un array con los siguientes valores  y si quieres obtener un valor del array deberias hacer algo asi:
+
+// en la version de PHP 5.4
+$segundoelemento = ObtenerArray()[1];
+
+como vez en el codigo cree una variable llamada segundoelemento el cual indicamos la funcion obtenerArray y indicamos el indice 1 del  array el cual es el valor 2 en el array.
+
+y con echo podrias imprimirla.
+
+ahora que ya conoces como funciona un array a nivel basico deberias conocer la funcion
+unset() de PHP que es muy interesante y buena, a continuacion veremos algunos ejemplos basicos con esta funcion:
+
+ pero antes de nada deberias saber como agregar un nuevo elemento en un array.
+ 
+ $arr["x"] = 42; //agregas el valor 42 con el key x en el array llamado arr
+ 
+  okay ahora que ya sabes como se agrega un nuevo elemento al array deberias saber
+  como se elemina un elemento,imaginemos que quieres eliminar el elemento 5 en un array deberias  hacerlo de la siguiente manera :
+ 
+               
+unset($arr[5]); // Esto elemina el elemento 5 en el array arr
+
+pero si quieres por ejemplo eleminar todo el array deberias hacer algo asi:
+
+unset($arr);
+
+
+
+                
+
+
+
+  
+ 
+ 
+
+
  
 
 
