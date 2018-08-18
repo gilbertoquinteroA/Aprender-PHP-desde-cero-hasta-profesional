@@ -19,7 +19,7 @@ todo el mundo conoce apache actualmente esta en la version 2.4 (2018), pero buen
 
 Apache es un servidor web HTTP de código abierto para plataformas Unix-like (BSD, GNU/Linux, etc.), Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la noción de sitio virtual. En sus inicios se basaba en el código de NCSA HTTPd 1.3, pero más tarde fue reescrito por completo.
 
-aunque existen mas servidores web el mas popular es apache(bueno principalnente porque es open source y aqui no le gusta el open source y lo gratis)
+aunque existen mas servidores web el mas popular es apache(bueno principalnente porque es open source y aquien no le gusta el open source y lo gratis)
 
 
 fuente:https://clientes.hostname.cl/knowledgebase.php?action=displayarticle&id=35
@@ -113,10 +113,10 @@ facil de PHP.
   Objects
   Resources
   NULL
-  Callbacks / Callables
+  Callbacks 
   
   
-   primero veremos booleano , como funciona y  como se declara:
+   primero veremos booleanos , como funciona y  como se declara:
    
    bueno como sabes un boleano solo puede devolver dos valores un TRUE o FALSE (osea un verdadero o falso)
    
@@ -182,7 +182,7 @@ $c = 7E-10;
 Igual como con el intergs los float son dependiente de la plantaforma para su tamaño.
 
 
-los numeros flotantes tienen un limite de precision.JQuery depente del sistema operativo, PHP usa tipucante  IEEE 754 format
+los numeros flotantes tienen un limite de precision.JQuery depente del sistema operativo, PHP usa tipicante  IEEE 754 format
 
 si quieres aprender mas sobre este formato te sugiero leer este articulo en ingles: http://www.oxfordmathcenter.com/drupal7/node/43
 
@@ -270,7 +270,7 @@ $array = array("valor1", "valor2", "valor3", "valor4");
 var_dump($array);
 ?>
 
-si si si tienen un indentificador pero no como los arrays anteriores.
+ si tienen un indentificador pero no como los arrays anteriores.
 
 en php puedes especificar solo un keys y a los otros no de la siguiente manera:
 
@@ -332,9 +332,9 @@ como vez tenemos un array con los siguientes valores  y si quieres obtener un va
 // en la version de PHP 5.4
 $segundoelemento = ObtenerArray()[1];
 
-como vez en el codigo cree una variable llamada segundoelemento el cual indicamos la funcion obtenerArray y indicamos el indice 1 del  array el cual es el valor 2 en el array.
+como vez en el codigo crea una variable llamada $segundoelemento el cual indicamos la funcion obtenerArray y indicamos el indice 1 del  array el cual es el valor 2 en el array.
 
-y con echo podrias imprimirla.
+y conb un echo podrias imprimirla.
 
 ahora que ya conoces como funciona un array a nivel basico deberias conocer la funcion
 unset() de PHP que es muy interesante y buena, a continuacion veremos algunos ejemplos basicos con esta funcion:
@@ -353,10 +353,101 @@ pero si quieres por ejemplo eleminar todo el array deberias hacer algo asi:
 
 unset($arr);
 
+Resources
+
+ Un Resources es una variable especial que contiene una referencia a un recurso externo. Los recursos son creados y utilizados por funciones especiales.
+ 
+ para devolver algo podrias usar la funcion  get_resource_type agrega en la version: (PHP 4 >= 4.0.2, PHP 5, PHP 7)
+ 
+ su estructura es asi:  string get_resource_type ( resource $handle )
+ 
+   $handle es el valor que devolvera.
+   
+   un ejmeplo sencillo para este tipo de datos es este:
+   
+   // imprimir: mysql link
+    $c = mysql_connect();
+   echo get_resource_type($c) . "\n";
+   
+   imaginemos que queremos imprimir el link de la conexion de $c  otros ejemplos es por ejemplo si quieres imprimir un documento        
+   o un archivo xml.
+   
+   Ahora que ya conocer el recources deberias conocer el tipo NULL
+   
+   
+   bueno como ya conoces y todo el mundo que ya tiene un minimo conocimiento de programacion debe saber que los tipo null 
+   siginifca nada es un tipo de valor que no contiene nada.
+   
+   un ejemplo es este:
+   
+   
+    <?php 
+    $var = NULL;       
+    ?>
 
 
-                
+     bueno ahora que ya conoces el tipo de valor NULL deberias ver los objectos en PHP.
+     
+     
+     bueno si sabes  algo de POO sabras que un objeto es sencillamente algo de la vida real en la programacion por ejemplo si 
+     tenemos un carro el carro es el objeto y sus caracterizticas son las propiedades del ojetos y la  cual seran usadas por 
+     metodos para hacer algo en este caso seran las funcionalidades que el carro hara.
+     
+     
+     pero como se crear el objeto ps de la siguiente manera:
+     
+     
+   <?php
+class MyClase
+{
+    function Haceralgo()
+    {
+        echo "mensaje "; 
+    }
+}
 
+    $bar = new MyClase;
+    $bar->Haceralgo();
+   ?>
+    bueno expliquemos el codigo anterior cree una clase llamada MyClase la cual es el molde para los objetos y metodos
+    despues cree un sencillo metodo/funcion el cual devuelve un string con un mensaje, mas abajo cree una variable llamada $bar
+    la cual esl a instancia del objeto creado en seguida de $bar esta new la cual crea un objecto de la clase MyClase
+    y despues usando ese objeto llamado al metodo Haceralgo para imprimir el mensaje.
+    
+    como vez es sencillo crear objectos y usarlos de una manera sencilla y sin complicaciones.
+    
+    
+    Ahora que ya conoces los objetos deberias ver los Iterables que es algo casi nuevo en PHP se agrego en la version de php 7.1
+    
+    Iterable es un pseudo-tipo introducido en PHP 7.1. Acepta cualquier matriz u objeto que implemente la interfaz de 
+    Traversable. Ambos tipos son iterables utilizando foreach y se pueden usar con rendimiento desde dentro de un generador.
+    
+    buenos los Iterables no son muy usados en mi punto personal casi no los veo pero  si quieres conocer te recomiendo leer esto 
+    en ingles :
+    
+       
+       [info sobre los Iterables](http://php.net/manual/en/language.types.iterable.php)
+       
+       
+       Ahora que ya conoces la mayoria de los tipo de datos te falta conocer solamente el ultimo que es :
+       
+       
+       Callbacks / Callables 
+              [Callbacks / Callables](https://stackoverflow.com/questions/48947/how-do-i-implement-a-callback-in-php)
+
+
+       
+       
+    
+    
+
+
+
+   
+    
+    
+   
+   
 
 
   
