@@ -435,8 +435,49 @@ class MyClase
        Callbacks / Callables 
               [Callbacks / Callables](https://stackoverflow.com/questions/48947/how-do-i-implement-a-callback-in-php)
 
+Ahora que ya conoces los tipos en php deberias conocer las variables en PHP, bueno como todo el mundo sabe las variables son 
+cambo en memoria que almacena un dato temporalmente.
 
-       
+en php las variables son representadas por un simbolo de dolar primero y despues el nombre, de esta manera:
+
+    $Nombre = 'Bob';
+    
+      Variables  predeterminadas:
+      
+      PHP tiene un conjunto de variables definidas en el lenguaje de programacion PHP.
+      
+      Superglobals :
+      
+      los superglobales son variables integradas que están siempre disponibles en todos los ámbitos.
+      
+      Varias variables predefinidas en PHP son "superglobales", lo que significa que están disponibles 
+      en todos los ámbitos a lo largo de un guión. No hay necesidad de hacer global $ variable; 
+      para acceder a ellos dentro de funciones o métodos.
+      
+      
+      Estas variables superglobales son:
+      
+    $GLOBALS  :
+    
+    $_SERVER  :
+     obtener información del servidor y del entorno de ejecución
+      
+
+    
+    $_GET     :
+    
+    $_POST    :
+    
+    $_FILES   :
+    
+    $_COOKIE  :
+    
+    $_SESSION :
+    
+    $_REQUEST :
+    
+    $_ENV     :
+
        
     
     
